@@ -4,6 +4,7 @@ from .extractors.base_extractor import BaseExtractor
 from .extractors.text_extractor import TextExtractor
 from .extractors.office_extractor import OfficeExtractor
 from .extractors.pdf_extractor import PDFExtractor
+from .extractors.model_extractor import ModelExtractor
 from .utils.file_utils import FileUtils
 from .utils.logger import logger
 
@@ -25,7 +26,8 @@ class FileProcessor:
         self.extractors: List[BaseExtractor] = [
             TextExtractor(),
             OfficeExtractor(),
-            PDFExtractor()
+            PDFExtractor(),
+            ModelExtractor()
         ]
         
         # File utils'i başlat
